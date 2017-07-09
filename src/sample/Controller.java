@@ -56,6 +56,12 @@ public class Controller {
     private Label searchTitle;
     @FXML
     protected static ButtonType buttonOK;
+    @FXML
+    private Button editRecipe;
+    @FXML
+    private TextArea ingredientsText;
+    @FXML
+    private Button deleteRecipe;
 
     private List<Recipe> recipeList;
     private FilteredList<Recipe> filteredList;
@@ -66,6 +72,8 @@ public class Controller {
 
     public void initialize() {
 
+        mainTextArea.setEditable(false);
+        ingredientsText.setEditable(false);
         listContext = new ContextMenu();
         MenuItem delete = new MenuItem("Delete");
         delete.setOnAction(new EventHandler<ActionEvent>() {
@@ -160,6 +168,8 @@ public class Controller {
             mainTextArea.setText(recipeDescrip.toString());
             setCenterImage();
             recipeChosen = selected;
+            editRecipe.setDisable(false);
+            deleteRecipe.setDisable(false);
         }
 
     }

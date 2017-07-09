@@ -21,7 +21,7 @@
 <?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.control.ToggleButton?>
 <BorderPane fx:controller="sample.Controller"
-            xmlns:fx="http://javafx.com/fxml" style = "-fx-background-color: gray" fx:id = "MainBorderPane">
+            xmlns:fx="http://javafx.com/fxml" fx:id = "MainBorderPane">
 
     <top>
         <VBox>
@@ -96,12 +96,20 @@
     <center>
         <VBox BorderPane.alignment="CENTER">
             <HBox spacing = "10" alignment="CENTER" BorderPane.alignment="CENTER">
-                <Button text = "Edit Recipe" fx:id = "editRecipe" onAction="#editRecipeDialog" />
-                <Button text = "Delete Recipe" fx:id = "deleteRecipe"  onAction="#deleteItem" onKeyPressed="#handleKeyPressed">
+
+                <Button text = "Edit Recipe" fx:id = "editRecipe" onAction="#editRecipeDialog" disable="true">
+                    <tooltip>
+                <Tooltip text = "Edit this recipe."/>
+                     </tooltip>
+                </Button>
+
+                <Button text = "Delete Recipe" fx:id = "deleteRecipe"  onAction="#deleteItem"
+                        onKeyPressed="#handleKeyPressed" disable = "true">
                     <tooltip>
                         <Tooltip text = "Delete this recipe."/>
                     </tooltip>
                 </Button>
+
                 <ToggleButton text = "Show All Recipes" fx:id ="showAllToggle" onAction="#showAllRecipesToggle"/>
             </HBox>
             <HBox>
@@ -149,8 +157,8 @@
                     </ImageView>
                 </graphic>
             </Button>
-            <Button text = "Print Shopping List" fx:id = "PrintListButton"/>
-            <Button text = "Add new ingredients to cupboard" fx:id = "AddCupboardButton"/>
+            <Button text = "Print Shopping List" fx:id = "PrintListButton" disable = "true"/>
+            <Button text = "Add new ingredients to cupboard" fx:id = "AddCupboardButton" disable = "true"/>
         </HBox>
     </bottom>
 

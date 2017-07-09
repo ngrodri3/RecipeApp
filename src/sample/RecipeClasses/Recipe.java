@@ -31,7 +31,7 @@ public class Recipe {
 
 
 
-/* The addIngredient method is something I lifted from my Udemy course. It was meant to be used for a shopping cart
+/* The addIngredient method is something I lifted from my course. It was meant to be used for a shopping cart
 application. Basically, its an add method, so if the ingredient already exists itll add the amount you are trying to put
 onto the list. If it isnt on the list then it will only add the amount you described. Ex if you add 1 chicken breast,
 then later add another 2 chicken breasts, the print method will show you have 3 chicken breasts.

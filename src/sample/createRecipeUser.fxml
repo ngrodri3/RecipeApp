@@ -15,10 +15,12 @@
         <GridPane vgap = "10" hgap="10">
             <Label text = "Recipe name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
             <TextField fx:id = "newRecipeName1" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-            <Label text = "Total Time" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+            <Label text = "Total Time (Minutes)" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
             <TextField fx:id = "newRecipeTime" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
-            <Label text = "Recipe Instructions" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <TextArea wrapText="true" fx:id = "newRecipeInstructions1" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan = "4"/>
+            <Label text = "Ingredients" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id = "newRecipeIngredient" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label text = "Recipe Instructions" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextArea wrapText="true" fx:id = "newRecipeInstructions1" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan = "3"/>
             <Button text = "Upload a photo" GridPane.rowIndex="6" GridPane.columnIndex="0" fx:id = "addAnImage"
             onAction="#chooseImage"/>
             <TextField text = "" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.columnSpan="2" fx:id = "imageName"/>
